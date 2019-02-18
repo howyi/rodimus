@@ -20,9 +20,9 @@ defmodule RodimusWeb.Router do
 #  end
 
   # Other scopes may use custom stacks.
-   scope "/api", RodimusWeb do
+   scope "/", RodimusWeb do
      pipe_through :api
 
-     get "/", PageController, :index
-   end
+     post "/", HookController, :index
+  end
 end
